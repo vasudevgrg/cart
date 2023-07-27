@@ -11,10 +11,13 @@ const handleChange=e=>{
 
 const handleSubmit=(event)=>{
     event.preventDefault();
-    setTotalItems(...totalItems,props.item);
-     <ListItems item={props.item} />
+    setTotalItems([...totalItems,props.item]);
+     
+     totalItems.map((item)=>
+        
+        <ListItems item={item} />)
+     
 }
-
     return(
 
         <form action="" style={{display:'flex', flexDirection:'column', alignItems:'flex-start'}}>
@@ -26,7 +29,7 @@ const handleSubmit=(event)=>{
 
             <label htmlFor="">ThumbNail</label>
             <input type="text" onChange={handleChange} name="thumbnail" />
-            <button onSubmit={handleSubmit}>Submit</button>
+            <button onClick={(e)=>handleSubmit(e)}>Submit</button>
         </form>
     )
 }

@@ -2,17 +2,18 @@ import { useState } from "react";
 
 export const ListItems=(props)=>{
     const [value, setValue]= useState(0);
-
+  console.log("here");
     const styles={
         button:{
     
         },
         body:{
             display:'flex',
-              flexDirection: 'column',
+              flexDirection: 'row',
               height: '250px',
               width: '150px', 
-              padding: '10px'
+              padding: '10px',
+              position: 'relative'
         },
         divbody:{
             heigth:'150px',
@@ -34,6 +35,7 @@ export const ListItems=(props)=>{
     }
     return (
         <>
+        {console.log("here1")}
         <div>
         <div style={styles.body}>
     <div style={styles.divbody}>

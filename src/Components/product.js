@@ -29,19 +29,9 @@ const styles={
       height:''
     }
 }
-const addItems=()=>{
-    
-    setValue(value+1);
-}
-
-const subItems=()=>{
-    if(value>0){
-    setValue(value-1);
-    }
-}
 
 const handleChange=event=>{
-console.log(event.target.value, event.target.name);
+// console.log(event.target.value, event.target.name);
     setItem({
         ...item, 
        [event.target.name]: event.target.value
@@ -51,7 +41,7 @@ console.log(event.target.value, event.target.name);
 
     return(
         <>
-        <div style={{display:'flex', flexDirection:'row', justifyContent:'space-around'}}>
+        <div style={{display:'flex', flexDirection:'column', justifyContent:'space-around'}}>
 
        <Form item={item} onHandleChange={handleChange}/>
 
@@ -63,7 +53,7 @@ console.log(event.target.value, event.target.name);
     <span> ${item.price}</span>
 
     <button>
-    <button style={{position:'relative', left:'-40px'}} onClick={addItems}>+</button>{value} <button style={{position:'relative', left:'40px'}} onClick={subItems}>-</button>
+    Add to cart
     </button>
 </div>
 </div>
