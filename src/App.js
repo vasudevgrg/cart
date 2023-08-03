@@ -2,13 +2,14 @@ import Navbar from './Components/navbar.js';
 import './App.css';
 import { Form, Product } from './Components/product.js';
 import { ListItems } from './Components/ListItems.js';
+import { File1 } from './Components/file1.js';
 
 function App() {
   return (
     <div className="App" >
-      <Navbar/>
-      <Product/>
-      {/* <ListItems/> */}
+      <File1/>
+      
+  
     </div>
   );
 }

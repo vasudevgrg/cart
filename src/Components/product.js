@@ -3,7 +3,6 @@ import photo from '../images/photo.jpeg';
 import Form from './form';
 
 export const Product=()=>{
-    const [value, setValue]= useState(0);
 const [item, setItem]= useState({
     title:"",
     price:0,
@@ -43,7 +42,7 @@ const handleChange=event=>{
         <>
         <div style={{display:'flex', flexDirection:'column', justifyContent:'space-around'}}>
 
-       <Form item={item} onHandleChange={handleChange}/>
+       {/* <Form item={item} onHandleChange={handleChange}/> */}
 
         <div style={styles.body}>
     <div style={styles.divbody}>
